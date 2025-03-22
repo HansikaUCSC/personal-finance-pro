@@ -14,6 +14,8 @@ public class PasswordChangeTest {
     String password = prop.getProperty("login","password");
     String name = prop.getProperty("login","name");
     String newPassword = prop.getProperty("changePassword","newPassword");
+    String loginSuccessMessage = "Login Successful";
+    String successMessage = "Password Change Successful";
 
 
     @BeforeTest
@@ -25,9 +27,9 @@ public class PasswordChangeTest {
     public void changePassword(){
         login = new UserLogin();
         changePassword = new ChangePassword();
-        login.signIn(email,password,name);
+        login.signIn(email,password,name,loginSuccessMessage);
         changePassword.changePassword(password,newPassword,newPassword);
-        changePassword.verifyChangePassword();
+        GlobalConfigurations.getInstance().verifyAlert(successMessage);
     }
     @AfterTest
     public void tearDown(){

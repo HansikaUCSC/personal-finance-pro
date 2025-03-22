@@ -13,16 +13,16 @@ public class UserLogin {
     String loginButton = prop.getProperty("loginPageObjects","loginButton.element");
     String profileIcon = prop.getProperty("loginPageObjects","profileIcon.element");
 
-    public void signIn(String email, String password,String name){
+    public void signIn(String email, String password,String name,String successMessage){
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(loginEmail),30);
         driver.findElement(By.id(loginEmail)).sendKeys(email);
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(loginPassword),30);
         driver.findElement(By.id(loginPassword)).sendKeys(password);
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(loginButton),30);
         driver.findElement(By.id(loginButton)).click();
+        GlobalConfigurations.getInstance().verifyAlert(successMessage);
     }
     public void verifySignIn(String name){
-        GlobalConfigurations.getInstance().verifyAlert("Login Successful");
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(profileIcon),30);
         String profileName = driver.findElement(By.id(profileIcon)).getText().trim();
         profileName = profileName.replaceAll("\\s+", " ");
