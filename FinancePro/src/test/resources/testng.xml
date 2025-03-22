@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Epic01">
+    <test name="Registration Tests">
+        <classes>
+            <class name="RegisterUserTest"/>
+        </classes>
+    </test>
+    <test name="Login Tests">
+        <classes>
+            <class name="LoginTest"/>
+        </classes>
+    </test>
+    <test name="Change Password Test">
+        <classes>
+            <class name="PasswordChangeTest"/>
+        </classes>
+    </test>
+    <test name="Forget Password Test">
+        <classes>
+            <class name="ForgetPassowrdTest"/>
+        </classes>
+    </test>
+</suite>
