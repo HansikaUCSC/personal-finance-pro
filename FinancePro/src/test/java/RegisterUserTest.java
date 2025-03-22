@@ -16,6 +16,8 @@ public class RegisterUserTest {
     String name = prop.getProperty("registration", "name");
     String password = prop.getProperty("registration", "password");
     String confirmPassword = prop.getProperty("registration", "confirmPassword");
+    String regSuccessMessage = prop.getProperty("registration", "regSuccessMessage");
+    String regCompletionMessage = prop.getProperty("registration", "regCompletionMessage");
     String serverDomain = "hxd6i8zi.mailosaur.net";
 
     public String getRandomEmail() {
@@ -32,7 +34,7 @@ public class RegisterUserTest {
     public void testRegistrationWithOTP() throws Exception {
         String email = getRandomEmail();
         userRegistration = new UserRegistration();
-        userRegistration.signUp(name, email, password, confirmPassword);
+        userRegistration.signUp(name, email, password, confirmPassword,regSuccessMessage, regCompletionMessage);
     }
 
     @AfterTest
