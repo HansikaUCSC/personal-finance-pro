@@ -1,26 +1,30 @@
 package org.financePro;
 
 import org.financePro.utils.GlobalConfigurations;
+import org.financePro.utils.PropertyFileReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class UserLogin {
     WebDriver driver = GlobalConfigurations.getInstance().getDriver();
+    PropertyFileReader prop = new PropertyFileReader();
+    String loginEmail = prop.getProperty("loginPageObjects","email.element");
+    String loginPassword = prop.getProperty("loginPageObjects","password.element");
+    String loginButton = prop.getProperty("loginPageObjects","loginButton.element");
+    String profileIcon = prop.getProperty("loginPageObjects","profileIcon.element");
 
     public void signIn(String email, String password,String name){
-        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id("email"),30);
-        driver.findElement(By.id("email")).sendKeys(email);
-        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id("password"),30);
-        driver.findElement(By.id("password")).sendKeys(password);
-        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id("btn_signIn"),30);
-        driver.findElement(By.id("btn_signIn")).click();
+        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(loginEmail),30);
+        driver.findElement(By.id(loginEmail)).sendKeys(email);
+        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(loginPassword),30);
+        driver.findElement(By.id(loginPassword)).sendKeys(password);
+        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(loginButton),30);
+        driver.findElement(By.id(loginButton)).click();
     }
     public void verifySignIn(String name){
-//        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.xpath("//div[@role='alert']"),30);
-//        String alertMessage = driver.findElement(By.xpath("//div[@role='alert']")).getText();
-//        assert alertMessage.equals("Login Successful") : alertMessage;
-        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id("lbl_loginUser"),30);
-        String profileName = driver.findElement(By.id("lbl_loginUser")).getText().trim();
+        GlobalConfigurations.getInstance().verifyAlert("Login Successful");
+        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(profileIcon),30);
+        String profileName = driver.findElement(By.id(profileIcon)).getText().trim();
         profileName = profileName.replaceAll("\\s+", " ");
         assert profileName.equals(name);
     }

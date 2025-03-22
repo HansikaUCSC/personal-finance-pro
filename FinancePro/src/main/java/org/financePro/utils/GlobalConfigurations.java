@@ -63,6 +63,13 @@ public class GlobalConfigurations {
                 until(ExpectedConditions.presenceOfElementLocated(locator));
         return element;
     }
+    public void verifyAlert(String expectedAlertText){
+        String alert = properties.getProperty("globalObjects","alert.element");
+        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.xpath(alert),30);
+        String alertMessage = driver.findElement(By.xpath(alert)).getText();
+        assert alertMessage.equals(expectedAlertText) : alertMessage;
+        driver.findElement(By.xpath(alert)).click();
+    }
     public void closeBrowser(){
         driver.close();
     }
