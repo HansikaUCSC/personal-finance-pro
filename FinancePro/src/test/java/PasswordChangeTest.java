@@ -12,7 +12,6 @@ public class PasswordChangeTest {
     PropertyFileReader prop = new PropertyFileReader();
     String email = prop.getProperty("login","email");
     String password = prop.getProperty("login","password");
-    String name = prop.getProperty("login","name");
     String newPassword = prop.getProperty("changePassword","newPassword");
     String loginSuccessMessage = "Login Successful";
     String successMessage = "Password Change Successful";
