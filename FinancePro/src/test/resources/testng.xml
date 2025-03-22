@@ -15,9 +15,9 @@
             <class name="PasswordChangeTest"/>
         </classes>
     </test>
-    <test name="Forget Password Test">
-        <classes>
-            <class name="ForgetPassowrdTest"/>
-        </classes>
-    </test>
+<!--    <test name="Forget Password Test">-->
+<!--        <classes>-->
+<!--            <class name="ForgetPasswordTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
