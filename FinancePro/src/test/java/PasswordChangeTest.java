@@ -27,7 +27,7 @@ public class PasswordChangeTest {
     public void changePassword(){
         login = new UserLogin();
         changePassword = new ChangePassword();
-        login.signIn(email,password,name,loginSuccessMessage);
+        login.signIn(email,password,loginSuccessMessage);
         changePassword.changePassword(password,newPassword,newPassword);
         GlobalConfigurations.getInstance().verifyAlert(successMessage);
     }

@@ -26,7 +26,7 @@ public class LoginTest {
     @Test(priority = 1)
     public void login(){
         login = new UserLogin();
-        login.signIn(email,password,name,successMessage);
+        login.signIn(email,password,successMessage);
         login.verifySignIn(name);
     }
     @Test(priority = 2)
