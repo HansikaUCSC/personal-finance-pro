@@ -13,8 +13,8 @@ public class PasswordChangeTest {
     String email = prop.getProperty("login","email");
     String password = prop.getProperty("login","password");
     String newPassword = prop.getProperty("changePassword","newPassword");
-    String loginSuccessMessage = "Login Successful";
-    String successMessage = "Password Change Successful";
+    String loginSuccessMessage = prop.getProperty("login","successMessage");
+    String successMessage = prop.getProperty("changePassword","successMessage");
 
 
     @BeforeTest

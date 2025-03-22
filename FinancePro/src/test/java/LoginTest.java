@@ -16,7 +16,7 @@ public class LoginTest {
     String password = prop.getProperty("login","password");
     String name = prop.getProperty("login","name");
     String url = prop.getProperty("config","url");
-    String successMessage = "Login Successful";
+    String successMessage = prop.getProperty("login","successMessage");
 
     @BeforeTest
     public void setUp(){
