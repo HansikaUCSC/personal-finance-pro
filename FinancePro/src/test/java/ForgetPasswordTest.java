@@ -1,4 +1,4 @@
-import org.financePro.ForgetPassword;
+import org.financePro.pages.ForgetPassword;
 import org.financePro.utils.GlobalConfigurations;
 import org.financePro.utils.PropertyFileReader;
 import org.testng.annotations.AfterTest;

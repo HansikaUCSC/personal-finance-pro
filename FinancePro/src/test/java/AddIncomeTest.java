@@ -1,5 +1,5 @@
-import org.financePro.AddFinanceEntry;
-import org.financePro.UserLogin;
+import org.financePro.pages.AddFinanceEntry;
+import org.financePro.pages.UserLogin;
 import org.financePro.utils.GlobalConfigurations;
 import org.financePro.utils.PropertyFileReader;
 import org.testng.annotations.AfterTest;

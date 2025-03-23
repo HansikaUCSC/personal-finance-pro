@@ -1,4 +1,4 @@
-import org.financePro.UserRegistration;
+import org.financePro.pages.UserRegistration;
 import org.financePro.utils.GlobalConfigurations;
 
 import org.financePro.utils.PropertyFileReader;

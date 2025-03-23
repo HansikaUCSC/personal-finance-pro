@@ -1,4 +1,4 @@
-package org.financePro;
+package org.financePro.pages;
 
 import org.financePro.utils.GlobalConfigurations;
 import org.financePro.utils.PropertyFileReader;

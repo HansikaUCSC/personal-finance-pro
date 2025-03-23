@@ -1,4 +1,4 @@
-package org.financePro;
+package org.financePro.pages;
 
 import com.mailosaur.MailosaurException;
 import org.financePro.utils.GlobalConfigurations;

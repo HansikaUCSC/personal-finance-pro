@@ -1,8 +1,8 @@
-import org.financePro.UserLogin;
-import org.financePro.UserLogout;
+import org.financePro.pages.UserLogin;
+import org.financePro.pages.UserLogout;
 import org.financePro.utils.GlobalConfigurations;
 import org.financePro.utils.PropertyFileReader;
-import org.financePro.viewUserProfile;
+import org.financePro.pages.viewUserProfile;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;

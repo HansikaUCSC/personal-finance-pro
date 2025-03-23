@@ -1,5 +1,5 @@
-import org.financePro.ChangePassword;
-import org.financePro.UserLogin;
+import org.financePro.pages.ChangePassword;
+import org.financePro.pages.UserLogin;
 import org.financePro.utils.GlobalConfigurations;
 import org.financePro.utils.PropertyFileReader;
 import org.testng.annotations.AfterTest;
