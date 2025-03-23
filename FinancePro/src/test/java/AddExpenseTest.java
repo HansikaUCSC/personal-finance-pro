@@ -13,7 +13,6 @@ public class AddExpenseTest {
     String email = prop.getProperty("login","email");
     String password = prop.getProperty("login","password");
     String loginSuccessMsg = prop.getProperty("login","successMessage");
-    String firstEntry = prop.getProperty("addExpense","firstEntry");
     String entryType = prop.getProperty("addExpense","entryType");
     String activityDate = prop.getProperty("addExpense","activityDate");
     String amount = prop.getProperty("addExpense","amount");
@@ -32,7 +31,7 @@ public class AddExpenseTest {
     @Test
     public void addExpenseEntry(){
         addFinanceEntry = new AddFinanceEntry();
-        addFinanceEntry.addNewFinanceEntry(firstEntry,entryType,activityDate,amount,expenseCategory,expenseSubCategory);
+        addFinanceEntry.addNewFinanceEntry(entryType,activityDate,amount,expenseCategory,expenseSubCategory);
         GlobalConfigurations.getInstance().verifyAlert(addSuccessMessage);
     }
 
