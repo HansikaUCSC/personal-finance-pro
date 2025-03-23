@@ -11,15 +11,15 @@ public class EditFinanceRecord {
     WebDriver driver = GlobalConfigurations.getInstance().getDriver();
     PropertyFileReader prop = new PropertyFileReader();
     NavigationToFinancePage navigationToFinancePage;
-    String editIconElement = prop.getProperty("FinancePageObjects","edit.icon.element");
-    String editTitleElement = prop.getProperty("FinancePageObjects","edit.page.header.element");
-    String activityDateElement = prop.getProperty("FinancePageObjects","activity.date.edit.element");
-    String amountFieldElement = prop.getProperty("FinancePageObjects","amount.element");
-    String categoryFieldElement = prop.getProperty("FinancePageObjects","category.element");
-    String subcategoryFieldElement = prop.getProperty("FinancePageObjects","subcategory.element");
-    String updateButtonElement = prop.getProperty("FinancePageObjects","update.button.element");
-    String confirmPopupTitleElement = prop.getProperty("FinancePageObjects","edit.confirm.popup.header.element");
-    String confirmUpdateButtonElement = prop.getProperty("FinancePageObjects","edit.confirm.update.button.element");
+    String editIconElement = prop.getProperty("financePageObjects","edit.icon.element");
+    String editTitleElement = prop.getProperty("financePageObjects","edit.page.header.element");
+    String activityDateElement = prop.getProperty("financePageObjects","activity.date.edit.element");
+    String amountFieldElement = prop.getProperty("financePageObjects","amount.element");
+    String categoryFieldElement = prop.getProperty("financePageObjects","category.element");
+    String subcategoryFieldElement = prop.getProperty("financePageObjects","subcategory.element");
+    String updateButtonElement = prop.getProperty("financePageObjects","update.button.element");
+    String confirmPopupTitleElement = prop.getProperty("financePageObjects","edit.confirm.popup.header.element");
+    String confirmUpdateButtonElement = prop.getProperty("financePageObjects","edit.confirm.button.element");
 
     public void editFinances(String activityDate, String amount, String category, String subCategory){
         navigationToFinancePage = new NavigationToFinancePage();

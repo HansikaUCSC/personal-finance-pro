@@ -12,15 +12,15 @@ public class AddFinanceEntry {
     PropertyFileReader prop = new PropertyFileReader();
     NavigationToFinancePage navigationToFinancePage;
 
-    String addFirstEntryButtonElement = prop.getProperty("FinancePageObjects","add.first.button.element");
-    String addNewEntryButtonElement = prop.getProperty("FinancePageObjects","add.button.element");
-    String incomeRadioElement = prop.getProperty("FinancePageObjects","income.element");
-    String expenseRadioElement = prop.getProperty("FinancePageObjects","expense.element");
-    String activityDateElement = prop.getProperty("FinancePageObjects","activity.date.element");
-    String amountFieldElement = prop.getProperty("FinancePageObjects","amount.element");
-    String categoryFieldElement = prop.getProperty("FinancePageObjects","category.element");
-    String subcategoryFieldElement = prop.getProperty("FinancePageObjects","subcategory.element");
-    String createButtonElement = prop.getProperty("FinancePageObjects","create.button.element");
+    String addFirstEntryButtonElement = prop.getProperty("financePageObjects","add.first.button.element");
+    String addNewEntryButtonElement = prop.getProperty("financePageObjects","add.button.element");
+    String incomeRadioElement = prop.getProperty("financePageObjects","income.element");
+    String expenseRadioElement = prop.getProperty("financePageObjects","expense.element");
+    String activityDateElement = prop.getProperty("financePageObjects","activity.date.element");
+    String amountFieldElement = prop.getProperty("financePageObjects","amount.element");
+    String categoryFieldElement = prop.getProperty("financePageObjects","category.element");
+    String subcategoryFieldElement = prop.getProperty("financePageObjects","subcategory.element");
+    String createButtonElement = prop.getProperty("financePageObjects","create.button.element");
 
     public void addNewFinanceEntry(String isFirstEntry,String entryType,String activityDate, String amount, String category, String subCategory){
         if (isFirstEntry.equals("true")){
