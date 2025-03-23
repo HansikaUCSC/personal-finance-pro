@@ -12,15 +12,15 @@ public class AddFinanceEntry {
     PropertyFileReader prop = new PropertyFileReader();
     NavigationToFinancePage navigationToFinancePage;
 
-    String addFirstEntryButtonElement = prop.getProperty("addFinancePageObjects","add.first.button.element");
-    String addNewEntryButtonElement = prop.getProperty("addFinancePageObjects","add.button.element");
-    String incomeRadioElement = prop.getProperty("addFinancePageObjects","income.element");
-    String expenseRadioElement = prop.getProperty("addFinancePageObjects","expense.element");
-    String activityDateElement = prop.getProperty("addFinancePageObjects","activity.date.element");
-    String amountFieldElement = prop.getProperty("addFinancePageObjects","amount.element");
-    String categoryFieldElement = prop.getProperty("addFinancePageObjects","category.element");
-    String subcategoryFieldElement = prop.getProperty("addFinancePageObjects","subcategory.element");
-    String createButtonElement = prop.getProperty("addFinancePageObjects","create.button.element");
+    String addFirstEntryButtonElement = prop.getProperty("FinancePageObjects","add.first.button.element");
+    String addNewEntryButtonElement = prop.getProperty("FinancePageObjects","add.button.element");
+    String incomeRadioElement = prop.getProperty("FinancePageObjects","income.element");
+    String expenseRadioElement = prop.getProperty("FinancePageObjects","expense.element");
+    String activityDateElement = prop.getProperty("FinancePageObjects","activity.date.element");
+    String amountFieldElement = prop.getProperty("FinancePageObjects","amount.element");
+    String categoryFieldElement = prop.getProperty("FinancePageObjects","category.element");
+    String subcategoryFieldElement = prop.getProperty("FinancePageObjects","subcategory.element");
+    String createButtonElement = prop.getProperty("FinancePageObjects","create.button.element");
 
     public void addNewFinanceEntry(String isFirstEntry,String entryType,String activityDate, String amount, String category, String subCategory){
         if (isFirstEntry.equals("true")){
