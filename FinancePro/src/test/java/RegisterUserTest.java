@@ -42,31 +42,3 @@ public class RegisterUserTest {
         GlobalConfigurations.getInstance().closeBrowser();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//        // Fetch OTP from 10 Minute Mail (retry for 60 seconds)
-//        String otp = null;
-//        for (int i = 0; i < 12; i++) { // Retry for 1 minute (12 * 5 seconds)
-//            otp = OTPUtils.getOTPFromMailosaur(email); // Pass email from property file
-//            if (otp != null) break;
-//            Thread.sleep(5000); // Wait 5 seconds between retries
-//        }
-//
-//        if (otp == null) {
-//            throw new RuntimeException("OTP not found in the inbox.");
-//        }
-//
-//        // Submit OTP
