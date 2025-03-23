@@ -6,20 +6,20 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class AddIncomeTest {
+public class AddExpenseTest {
     UserLogin login;
     AddFinanceEntry addFinanceEntry;
     PropertyFileReader prop = new PropertyFileReader();
     String email = prop.getProperty("login","email");
     String password = prop.getProperty("login","password");
     String loginSuccessMsg = prop.getProperty("login","successMessage");
-    String firstEntry = prop.getProperty("addIncome","firstEntry");
-    String entryType = prop.getProperty("addIncome","entryType");
-    String activityDate = prop.getProperty("addIncome","activityDate");
-    String amount = prop.getProperty("addIncome","amount");
-    String incomeCategory = prop.getProperty("addIncome","incomeCategory");
-    String incomeSubCategory = prop.getProperty("addIncome","incomeSubCategory");
-    String addSuccessMessage = prop.getProperty("addIncome","addSuccessMessage");
+    String firstEntry = prop.getProperty("addExpense","firstEntry");
+    String entryType = prop.getProperty("addExpense","entryType");
+    String activityDate = prop.getProperty("addExpense","activityDate");
+    String amount = prop.getProperty("addExpense","amount");
+    String expenseCategory = prop.getProperty("addExpense","expenseCategory");
+    String expenseSubCategory = prop.getProperty("addExpense","expenseSubCategory");
+    String addSuccessMessage = prop.getProperty("addExpense","addSuccessMessage");
 
     @BeforeTest
     public void setUp(){
@@ -30,10 +30,10 @@ public class AddIncomeTest {
     }
 
     @Test
-    public void addIncomeEntry(){
-       addFinanceEntry = new AddFinanceEntry();
-       addFinanceEntry.addNewFinanceEntry(firstEntry,entryType,activityDate,amount,incomeCategory,incomeSubCategory);
-       GlobalConfigurations.getInstance().verifyAlert(addSuccessMessage);
+    public void addExpenseEntry(){
+        addFinanceEntry = new AddFinanceEntry();
+        addFinanceEntry.addNewFinanceEntry(firstEntry,entryType,activityDate,amount,expenseCategory,expenseSubCategory);
+        GlobalConfigurations.getInstance().verifyAlert(addSuccessMessage);
     }
 
     @AfterTest
