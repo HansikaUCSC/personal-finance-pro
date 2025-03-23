@@ -19,19 +19,20 @@ public class AddExpenseTest {
     String expenseCategory = prop.getProperty("addExpense","expenseCategory");
     String expenseSubCategory = prop.getProperty("addExpense","expenseSubCategory");
     String addSuccessMessage = prop.getProperty("addExpense","addSuccessMessage");
+    String isFirstEntry = prop.getProperty("addExpense","isFirstEntry");
 
     @BeforeTest
     public void setUp(){
         GlobalConfigurations.getInstance().openBrowser("chrome");
         GlobalConfigurations.getInstance().navigateToURL();
-        login = new UserLogin();
-        login.signIn(email,password,loginSuccessMsg);
     }
 
     @Test
     public void addExpenseEntry(){
+        login = new UserLogin();
+        login.signIn(email,password,loginSuccessMsg);
         addFinanceEntry = new AddFinanceEntry();
-        addFinanceEntry.addNewFinanceEntry(entryType,activityDate,amount,expenseCategory,expenseSubCategory);
+        addFinanceEntry.addNewFinanceEntry(isFirstEntry,entryType,activityDate,amount,expenseCategory,expenseSubCategory);
         GlobalConfigurations.getInstance().verifyAlert(addSuccessMessage);
     }
 

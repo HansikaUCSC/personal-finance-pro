@@ -12,8 +12,8 @@ public class NavigationToFinancePage {
     String financePageHeaderElement = prop.getProperty("globalObjects", "finance.page.header.element");
 
     public void navigateToFinancePage(){
-        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.xpath(financeMenuElement),30);
-        driver.findElement(By.xpath(financeMenuElement)).click();
+        GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(financeMenuElement),30);
+        driver.findElement(By.id(financeMenuElement)).click();
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.xpath(financePageHeaderElement),30);
     }
 }
