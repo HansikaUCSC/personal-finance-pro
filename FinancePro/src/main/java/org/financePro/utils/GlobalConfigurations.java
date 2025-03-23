@@ -63,6 +63,11 @@ public class GlobalConfigurations {
                 until(ExpectedConditions.presenceOfElementLocated(locator));
         return element;
     }
+    public WebElement waitUntilNextElementClickable(By locator, int timeout){
+        WebElement element = new WebDriverWait(GlobalConfigurations.getInstance().getDriver(), Duration.ofSeconds(timeout)).
+                until(ExpectedConditions.elementToBeClickable(locator));
+        return element;
+    }
     public void verifyAlert(String expectedAlertText){
         String alert = properties.getProperty("globalObjects","alert.element");
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.xpath(alert),30);
