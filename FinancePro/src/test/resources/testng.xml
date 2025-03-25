@@ -15,6 +15,32 @@
             <class name="PasswordChangeTest"/>
         </classes>
     </test>
+    <test name="Add Income">
+        <classes>
+            <class name="AddIncomeTest"/>
+        </classes>
+    </test>
+    <test name="Add expense">
+        <classes>
+            <class name="AddExpenseTest"/>
+        </classes>
+    </test>
+    <test name="Edit entry">
+        <classes>
+            <class name="EditFinanceTest"/>
+        </classes>
+    </test>
+    <test name="Delete Finance Record">
+        <classes>
+            <class name="DeleteFinanceTest"/>
+        </classes>
+    </test>
+    <test name="Delete Finance Record2">
+        <classes>
+            <class name="DeleteFinanceTest"/>
+        </classes>
+    </test>
+
 <!--    <test name="Forget Password Test">-->
 <!--        <classes>-->
 <!--            <class name="ForgetPasswordTest"/>-->
