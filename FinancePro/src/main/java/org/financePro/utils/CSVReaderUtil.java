@@ -13,11 +13,11 @@ public class CSVReaderUtil {
             boolean isHeader = true;
             String line;
             while ((line = br.readLine()) != null) {
-                if (isHeader) {  // Skip the first line (header)
+                if (isHeader) {
                     isHeader = false;
                     continue;
                 }
-                data.add(line.split(",")); // Assuming CSV is comma-separated
+                data.add(line.split(","));
             }
         } catch (IOException e) {
             e.printStackTrace();

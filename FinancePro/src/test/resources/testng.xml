@@ -30,15 +30,10 @@
             <class name="DeleteFinanceTest"/>
         </classes>
     </test>
-    <test name="Delete Finance Record2">
+
+    <test name="Forget Password Test">
         <classes>
-            <class name="DeleteFinanceTest"/>
+            <class name="ForgetPasswordTest"/>
         </classes>
     </test>
-
-<!--    <test name="Forget Password Test">-->
-<!--        <classes>-->
-<!--            <class name="ForgetPasswordTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
 </suite>

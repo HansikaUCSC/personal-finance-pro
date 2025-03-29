@@ -12,7 +12,7 @@ import java.util.List;
 public class AddFinanceTest {
     UserLogin login;
     AddFinanceEntry addFinanceEntry;
-    String csvFilePath = "src/test/resources/financeData.csv"; // Change path accordingly
+    String csvFilePath = "src/test/resources/financeData.csv";
     PropertyFileReader prop = new PropertyFileReader();
     String email = prop.getProperty("login","email");
     String password = prop.getProperty("login","password");
@@ -37,7 +37,6 @@ public class AddFinanceTest {
                                String amount, String incomeCategory, String incomeSubCategory,String addSuccessMessage) {
         addFinanceEntry = new AddFinanceEntry();
         addFinanceEntry.addNewFinanceEntry(isFirstEntry, entryType, activityDate, amount, incomeCategory, incomeSubCategory,addSuccessMessage);
-         // Modify as needed
     }
 
     @AfterTest
