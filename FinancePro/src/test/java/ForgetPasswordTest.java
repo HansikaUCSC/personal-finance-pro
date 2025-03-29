@@ -11,8 +11,9 @@ public class ForgetPasswordTest {
     String email = prop.getProperty("login","email");
     String newPassword = prop.getProperty("forgetPassword","new.password");
     String confirmPassword = prop.getProperty("forgetPassword","confirm.password");
-    String optSentSuccessMessage = prop.getProperty("forgetPasswordPageObjects","opt.sent.success.message");
-    String PasswordResetSuccessMsg = prop.getProperty("forgetPasswordPageObjects","password.reset.success.message");
+    String optSentSuccessMessage = prop.getProperty("forgetPassword","opt.sent.success.message");
+    String otpValidatedMessage = prop.getProperty("forgetPassword","otp.validated.message");
+    String PasswordResetSuccessMsg = prop.getProperty("forgetPassword","password.reset.success.message");
 
     @BeforeTest
     public void setUp(){
@@ -23,7 +24,7 @@ public class ForgetPasswordTest {
     @Test
     public void forgetPasswordTest() throws Exception {
         forgetPassword = new ForgetPassword();
-        forgetPassword.forgetPassword(email,newPassword,optSentSuccessMessage,PasswordResetSuccessMsg);
+        forgetPassword.forgetPassword(email,newPassword,confirmPassword,optSentSuccessMessage,otpValidatedMessage,PasswordResetSuccessMsg);
     }
 
     @AfterTest

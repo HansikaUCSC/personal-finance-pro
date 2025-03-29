@@ -26,6 +26,7 @@ public class UserRegistration {
     String otpFieldElement = prop.getProperty("registrationPageObjects","otp.element");
     String submitOTPButtonElement = prop.getProperty("registrationPageObjects","otp.submit.button.element");
     String backToLoginButtonElement = prop.getProperty("registrationPageObjects","back.button.element");
+    String emailSubject = prop.getProperty("registrationPageObjects","email.subject");
 
     public void signUp(String name,String email,String password, String confrimPassword, String regSuccessMsg, String regCompletionMsg) throws MailosaurException, IOException {
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.xpath(TermsConditionElement),30);
@@ -46,7 +47,7 @@ public class UserRegistration {
         GlobalConfigurations.getInstance().verifyAlert(regSuccessMsg);
 
         otpUtils = new OTPUtils();
-        String otp = otpUtils.getOTPFromMailosaur(email);
+        String otp = otpUtils.getOTPFromMailosaur(email,emailSubject);
 
         driver.findElement(By.xpath(otpFieldElement)).sendKeys(otp);
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(submitOTPButtonElement), 30);

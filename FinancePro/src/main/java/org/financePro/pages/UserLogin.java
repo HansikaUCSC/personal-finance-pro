@@ -21,6 +21,7 @@ public class UserLogin {
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(loginButton),30);
         driver.findElement(By.id(loginButton)).click();
         GlobalConfigurations.getInstance().verifyAlert(successMessage);
+
     }
     public void verifySignIn(String name){
         GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(profileIcon),30);
