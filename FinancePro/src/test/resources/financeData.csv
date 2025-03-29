@@ -1,0 +1,3 @@
+isFirstEntry,entryType,activityDate,amount,incomeCategory,incomeSubCategory,addSuccessMessage
+false,income,03-29-2025,200000,Salary or Wages,Gross Salary,Activity created successfully!
+false,expense,03-29-2025,200000,Housing,Rent or Mortgage,Activity created successfully!

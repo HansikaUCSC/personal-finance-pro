@@ -22,7 +22,7 @@ public class AddFinanceEntry {
     String subcategoryFieldElement = prop.getProperty("financePageObjects","subcategory.element");
     String createButtonElement = prop.getProperty("financePageObjects","create.button.element");
 
-    public void addNewFinanceEntry(String isFirstEntry,String entryType,String activityDate, String amount, String category, String subCategory){
+    public void addNewFinanceEntry(String isFirstEntry,String entryType,String activityDate, String amount, String category, String subCategory,String addSuccessMessage){
         if (isFirstEntry.equals("true")){
             GlobalConfigurations.getInstance().waitUntilNextElementAppears(By.id(addFirstEntryButtonElement),30);
             driver.findElement(By.id(addFirstEntryButtonElement)).click();
@@ -51,5 +51,6 @@ public class AddFinanceEntry {
         subCategorySelect.selectByVisibleText(subCategory);
         GlobalConfigurations.getInstance().waitUntilNextElementClickable(By.id(createButtonElement),30);
         driver.findElement(By.id(createButtonElement)).click();
+        GlobalConfigurations.getInstance().verifyAlert(addSuccessMessage);
     }
 }

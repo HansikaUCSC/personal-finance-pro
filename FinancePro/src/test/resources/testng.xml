@@ -15,17 +15,12 @@
             <class name="PasswordChangeTest"/>
         </classes>
     </test>
-    <test name="Add Income">
+    <test name="Add Finance">
         <classes>
-            <class name="AddIncomeTest"/>
+            <class name="AddFinanceTest"/>
         </classes>
     </test>
-    <test name="Add expense">
-        <classes>
-            <class name="AddExpenseTest"/>
-        </classes>
-    </test>
-    <test name="Edit entry">
+    <test name="Edit Finance">
         <classes>
             <class name="EditFinanceTest"/>
         </classes>
